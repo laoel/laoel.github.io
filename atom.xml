@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laoel.github.io/"/>
-  <updated>2019-10-06T08:04:55.735Z</updated>
+  <updated>2019-10-09T06:55:37.593Z</updated>
   <id>https://laoel.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在ubuntu18.04上安装和配置Apache2</title>
+    <link href="https://laoel.github.io/2019/10/09/%E5%9C%A8ubuntu18-04%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEApache2/"/>
+    <id>https://laoel.github.io/2019/10/09/在ubuntu18-04上安装和配置Apache2/</id>
+    <published>2019-10-09T06:53:40.000Z</published>
+    <updated>2019-10-09T06:55:37.593Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="apache介绍"><a href="#apache介绍" class="headerlink" title="apache介绍"></a>apache介绍</h3><p>Apache HTTP Server（简称Apache）是Apache软件基金会的一个开放源码的网页服务器软件，可以在大多数计算机操作系统中运行，由于其跨平台和安全性，被广泛使用，是最流行的Web服务器端软件之一。它快速、可靠并且可通过简单的API扩展，将Perl/Python等解释器编译到服务器中。<br>Apache HTTP服务器是一个模块化的服务器，源于NCSAhttpd服务器，经过多次修改，成为世界使用排名第一的Web服务器软件。</p><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/var/www/html/      # 网站根目录</span><br><span class="line">├── index.html</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/      # Apache 配置文件的目录</span><br><span class="line">├── apache2.conf      # Apache配置文件</span><br><span class="line">├── conf-available</span><br><span class="line">├── conf-enabled</span><br><span class="line">├── envvars</span><br><span class="line">├── magic</span><br><span class="line">├── mods-available</span><br><span class="line">├── mods-enabled</span><br><span class="line">├── ports.conf</span><br><span class="line">├── sites-available</span><br><span class="line">└── sites-enabled</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/var/log/apache2/       # Apache存放日志的目录</span><br><span class="line">├── access.log</span><br><span class="line">├── error.log</span><br><span class="line">└── other_vhosts_access.log</span><br></pre></td></tr></table></figure><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol><li>首先更新软件</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure><p>update 和 upgrade 的区别</p><ul><li>update 是同步 /etc/apt/sources.list 和 /etc/apt/sources.list.d 中列出的源的索引，这样才能获取到最新的软件包。</li><li>upgrade 是升级已安装的所有软件包，升级之后的版本就是本地索引里的，因此，在执行 upgrade 之前一定要执行 update, 这样才能是最新的。</li></ul><ol start="2"><li>安装apache2软件包</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install apache2</span><br></pre></td></tr></table></figure><ol start="3"><li>查看Apache2 服务状态，看到<code>Active: active (running)</code>即代表服务在运行中。</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service apache2 status</span><br></pre></td></tr></table></figure><p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8ubuntu18.04%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEApache2/1570591029479.png" alt></p><ol start="4"><li>浏览器打开 <code>http://127.0.0.1</code> ,会看到Apache的默认页面，也就代表安装成功。</li></ol><p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8ubuntu18.04%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEApache2/1570591235418.png" alt></p><h3 id="常用管理命令"><a href="#常用管理命令" class="headerlink" title="常用管理命令"></a>常用管理命令</h3><table><thead><tr><th align="center">命令</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">systemctl status apache2</td><td align="center">查看服务状态</td></tr><tr><td align="center">systemctl start apache2</td><td align="center">启用Apache Web服务</td></tr><tr><td align="center">systemctl stop apache2</td><td align="center">停止Apache Web服务</td></tr><tr><td align="center">systemctl restart apache2</td><td align="center">重启Apache Web服务</td></tr><tr><td align="center">systemctl reload apache2</td><td align="center">载入Apache配置文件</td></tr><tr><td align="center">systemctl disable apache2</td><td align="center">禁用Apache服务的开机自启设置</td></tr><tr><td align="center">systemctl enable apache2</td><td align="center">设置Apache服务为开机自启</td></tr></tbody></table><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://linux.cn/article-9679-1.html" target="_blank" rel="noopener">如何在 Ubuntu 上安装和优化 Apache - Thishosting </a></p><p><a href="https://www.howtoing.com/how-to-install-the-apache-web-server-on-ubuntu-18-04" target="_blank" rel="noopener">如何在Ubuntu 18.04上安装Apache Web服务器 - howtoing</a></p><p><a href="http://httpd.apache.org/docs/trunk/en/misc/security_tips.html" target="_blank" rel="noopener">Apache官网的一些安全配置建议</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;apache介绍&quot;&gt;&lt;a href=&quot;#apache介绍&quot; class=&quot;headerlink&quot; title=&quot;apache介绍&quot;&gt;&lt;/a&gt;apache介绍&lt;/h3&gt;&lt;p&gt;Apache HTTP Server（简称Apache）是Apache软件基金会的一个开放源
+      
+    
+    </summary>
+    
+    
+      <category term="安装配置" scheme="https://laoel.github.io/categories/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Apache" scheme="https://laoel.github.io/tags/Apache/"/>
+    
+      <category term="配置" scheme="https://laoel.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>cve-2019-0708漏洞复现</title>
