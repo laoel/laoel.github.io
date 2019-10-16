@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://laoel.github.io/2019/10/06/cve-2019-0708%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</loc>
+    
+    <lastmod>2019-10-16T05:08:39.862Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://laoel.github.io/2019/10/16/%E5%9C%A8server-2012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/</loc>
+    
+    <lastmod>2019-10-16T05:07:24.333Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://laoel.github.io/2019/10/09/%E5%9C%A8ubuntu18-04%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEApache2/</loc>
     
-    <lastmod>2019-10-09T06:55:37.593Z</lastmod>
+    <lastmod>2019-10-16T04:51:49.995Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://laoel.github.io/2019/09/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%B0%8F%E8%AE%B0/</loc>
     
     <lastmod>2019-10-06T08:55:32.190Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://laoel.github.io/2019/10/06/cve-2019-0708%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</loc>
-    
-    <lastmod>2019-10-06T08:04:55.735Z</lastmod>
     
   </url>
   
