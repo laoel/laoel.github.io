@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laoel.github.io/"/>
-  <updated>2019-11-20T04:43:19.622Z</updated>
+  <updated>2019-11-20T08:13:01.622Z</updated>
   <id>https://laoel.github.io/</id>
   
   <author>
@@ -17,25 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用cmd命令打war包</title>
-    <link href="https://laoel.github.io/2019/11/20/%E4%BD%BF%E7%94%A8cmd%E5%91%BD%E4%BB%A4%E6%89%93war%E5%8C%85/"/>
-    <id>https://laoel.github.io/2019/11/20/使用cmd命令打war包/</id>
+    <title>一些配置小记</title>
+    <link href="https://laoel.github.io/2019/11/20/%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://laoel.github.io/2019/11/20/一些配置小记/</id>
     <published>2019-11-20T02:31:24.000Z</published>
-    <updated>2019-11-20T04:43:19.622Z</updated>
+    <updated>2019-11-20T08:13:01.622Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>cmd 命令把文件夹打成war包</strong> </p><ol><li>以管理员身份运行 CMD</li><li>cd到指定目录</li><li>输入以下命令即可</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar -cvf wwwroot.war *</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h4 id="Firefox关闭GET请求到detectportal-firefox-com网站的方法"><a href="#Firefox关闭GET请求到detectportal-firefox-com网站的方法" class="headerlink" title="Firefox关闭GET请求到detectportal.firefox.com网站的方法"></a>Firefox关闭GET请求到detectportal.firefox.com网站的方法</h4><p>用火狐浏览器代理抓包时，发现总是有 <a href="http://detectportal.firefox.com/success.txt" target="_blank" rel="noopener">http://detectportal.firefox.com/success.txt</a>  这个请求会被拦截到，很不方便。</p><p>解决办法，在地址栏输入 <code>about:config</code></p><p>搜索<code>network.captive-portal-service.enabled</code></p><p>双击把<code>true</code>改为<code>false</code>就可以了。</p><h4 id="cmd-命令把文件夹打成war包"><a href="#cmd-命令把文件夹打成war包" class="headerlink" title="cmd 命令把文件夹打成war包"></a>cmd 命令把文件夹打成war包</h4><ol><li>以管理员身份运行 CMD</li><li>cd到指定目录</li><li>输入以下命令即可</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar -cvf wwwroot.war *</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;cmd 命令把文件夹打成war包&lt;/strong&gt; &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;以管理员身份运行 CMD&lt;/li&gt;
-&lt;li&gt;cd到指定目录&lt;/li&gt;
-&lt;li&gt;输入以下命令即可&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight bash&quot;
+        &lt;h4 id=&quot;Firefox关闭GET请求到detectportal-firefox-com网站的方法&quot;&gt;&lt;a href=&quot;#Firefox关闭GET请求到detectportal-firefox-com网站的方法&quot; class=&quot;headerlink&quot; title=&quot;Fire
       
     
     </summary>
