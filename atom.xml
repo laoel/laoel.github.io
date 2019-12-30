@@ -49,9 +49,9 @@
     <link href="https://laoel.github.io/2019/11/20/%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0/"/>
     <id>https://laoel.github.io/2019/11/20/一些配置小记/</id>
     <published>2019-11-20T02:31:24.000Z</published>
-    <updated>2019-11-20T08:13:01.622Z</updated>
+    <updated>2019-12-30T02:07:40.569Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Firefox关闭GET请求到detectportal-firefox-com网站的方法"><a href="#Firefox关闭GET请求到detectportal-firefox-com网站的方法" class="headerlink" title="Firefox关闭GET请求到detectportal.firefox.com网站的方法"></a>Firefox关闭GET请求到detectportal.firefox.com网站的方法</h4><p>用火狐浏览器代理抓包时，发现总是有 <a href="http://detectportal.firefox.com/success.txt" target="_blank" rel="noopener">http://detectportal.firefox.com/success.txt</a>  这个请求会被拦截到，很不方便。</p><p>解决办法，在地址栏输入 <code>about:config</code></p><p>搜索<code>network.captive-portal-service.enabled</code></p><p>双击把<code>true</code>改为<code>false</code>就可以了。</p><h4 id="cmd-命令把文件夹打成war包"><a href="#cmd-命令把文件夹打成war包" class="headerlink" title="cmd 命令把文件夹打成war包"></a>cmd 命令把文件夹打成war包</h4><ol><li>以管理员身份运行 CMD</li><li>cd到指定目录</li><li>输入以下命令即可</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar -cvf wwwroot.war *</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h4 id="Firefox关闭GET请求到detectportal-firefox-com网站的方法"><a href="#Firefox关闭GET请求到detectportal-firefox-com网站的方法" class="headerlink" title="Firefox关闭GET请求到detectportal.firefox.com网站的方法"></a>Firefox关闭GET请求到detectportal.firefox.com网站的方法</h4><p>用火狐浏览器代理抓包时，发现总是有 <a href="http://detectportal.firefox.com/success.txt" target="_blank" rel="noopener">http://detectportal.firefox.com/success.txt</a>  这个请求会被拦截到，很不方便。</p><p>解决办法，在地址栏输入 <code>about:config</code></p><p>搜索<code>network.captive-portal-service.enabled</code></p><p>双击把<code>true</code>改为<code>false</code>就可以了。</p><h4 id="cmd-命令把文件夹打成war包"><a href="#cmd-命令把文件夹打成war包" class="headerlink" title="cmd 命令把文件夹打成war包"></a>cmd 命令把文件夹打成war包</h4><ol><li>以管理员身份运行 CMD</li><li>cd到指定目录</li><li>输入以下命令即可</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar -cvf wwwroot.war *</span><br></pre></td></tr></table></figure><h4 id="Google浏览器如何截取网页长图"><a href="#Google浏览器如何截取网页长图" class="headerlink" title="Google浏览器如何截取网页长图"></a>Google浏览器如何截取网页长图</h4><p><a href="https://www.liwei8090.com/14622.html" target="_blank" rel="noopener">https://www.liwei8090.com/14622.html</a></p>]]></content>
     
     <summary type="html">
     
@@ -293,9 +293,9 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
-      <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
-    
       <category term="技术文章" scheme="https://laoel.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
+    
+      <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
     
   </entry>
   
@@ -325,9 +325,9 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
-      <category term="书籍推荐" scheme="https://laoel.github.io/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/"/>
-    
       <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
+    
+      <category term="书籍推荐" scheme="https://laoel.github.io/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
