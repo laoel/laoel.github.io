@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laoel.github.io/"/>
-  <updated>2020-01-09T06:48:29.746Z</updated>
+  <updated>2020-01-09T06:51:58.381Z</updated>
   <id>https://laoel.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://laoel.github.io/2020/01/09/Web%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E5%BA%93-v1-0/"/>
     <id>https://laoel.github.io/2020/01/09/Web常见漏洞库-v1-0/</id>
     <published>2020-01-09T06:36:39.000Z</published>
-    <updated>2020-01-09T06:48:29.746Z</updated>
+    <updated>2020-01-09T06:51:58.381Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><h4 id="存储型XSS跨站脚本攻击"><a href="#存储型XSS跨站脚本攻击" class="headerlink" title="存储型XSS跨站脚本攻击"></a>存储型XSS跨站脚本攻击</h4><p><strong>漏洞级别</strong></p><p>高</p><p><strong>漏洞描述</strong></p><p>跨站脚本攻击是指应用程序没有对用户的输入，以及页面的输出进行严格地过滤，从而使恶意攻击者能往Web页面里插入恶意代码，当用户浏览该页面时，嵌入其中Web里面的恶意代码会被执行，从而达到恶意攻击者的特殊目的。</p><p><strong>漏洞危害</strong></p><p>恶意攻击者利用漏洞来窃取用户会话、账号，控制应用系统数据、网站挂马、控制受害者机器向其它网站发起攻击等等。</p><p><strong>修复建议</strong></p><p>1、检查所有用户可输入数据的地方是否有进行过滤或转义处理。包括但不限于这些字符：Javascript script src img onerror { } ( ) &lt; &gt; = , . ; :  “ ‘ # ! / * \。<br>2、根据页面的输出背景环境，对输出进行编码或使用一个统一的规则和库做输出编码，使用安全框架进行安全编码。<br>3、对于富文本框，使用白名单控制输入，而不是黑名单。<br>4、在Cookie 上设置HTTPOnly标志，从而禁止客户端脚本访问Cookie。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><h4 id="存储型XSS跨站脚本攻击"><a href="#存储型XSS跨站脚本攻击" class="headerlink" title="存储型XSS跨站脚本攻击"></a>存储型XSS跨站脚本攻击</h4><p><strong>漏洞级别</strong><br>高<br><strong>漏洞描述</strong><br>跨站脚本攻击是指应用程序没有对用户的输入，以及页面的输出进行严格地过滤，从而使恶意攻击者能往Web页面里插入恶意代码，当用户浏览该页面时，嵌入其中Web里面的恶意代码会被执行，从而达到恶意攻击者的特殊目的。<br><strong>漏洞危害</strong><br>恶意攻击者利用漏洞来窃取用户会话、账号，控制应用系统数据、网站挂马、控制受害者机器向其它网站发起攻击等等。<br><strong>修复建议</strong><br>1、检查所有用户可输入数据的地方是否有进行过滤或转义处理。包括但不限于这些字符：Javascript script src img onerror { } ( ) &lt; &gt; = , . ; :  “ ‘ # ! / * \。<br>2、根据页面的输出背景环境，对输出进行编码或使用一个统一的规则和库做输出编码，使用安全框架进行安全编码。<br>3、对于富文本框，使用白名单控制输入，而不是黑名单。<br>4、在Cookie 上设置HTTPOnly标志，从而禁止客户端脚本访问Cookie。</p>]]></content>
     
     <summary type="html">
     
