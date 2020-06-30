@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laoel.github.io/"/>
-  <updated>2020-04-28T09:53:21.592Z</updated>
+  <updated>2020-06-30T22:59:18.637Z</updated>
   <id>https://laoel.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安全圈里的公众号推荐</title>
+    <link href="https://laoel.github.io/2020/07/01/%E5%AE%89%E5%85%A8%E5%9C%88%E9%87%8C%E7%9A%84%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%A8%E8%8D%90/"/>
+    <id>https://laoel.github.io/2020/07/01/安全圈里的公众号推荐/</id>
+    <published>2020-06-30T22:57:40.000Z</published>
+    <updated>2020-06-30T22:59:18.637Z</updated>
+    
+    <content type="html"><![CDATA[<p>下面是我个人了解一些质量比较好的微信公众号，推荐大家关注，也欢迎补充（请自行去微信搜索公众号名称点击关注）。</p><h3 id="综合型"><a href="#综合型" class="headerlink" title="综合型"></a>综合型</h3><p><strong>安全社区</strong></p><p>FreeBuf</p><p>安全客</p><p>看雪学院</p><p>吾爱破解论坛</p><p><strong>偏向培训方面</strong></p><p>i春秋</p><p>合天智汇</p><p>行长叠报</p><p>HACK学习呀</p><p>安全祖师爷</p><p><strong>安全团队</strong></p><p>腾讯玄武实验室</p><p>猎户攻防实验室</p><p>Ms08067安全实验室</p><p>WhlTECat安全团队</p><p>Tide安全团队</p><p>ChaMd5安全团队</p><p>酒仙桥六号部队</p><p>玄魂工作室</p><p>星盟安全</p><p>国科漏斗社区</p><p><strong>个人（有特色）的安全公众号</strong></p><p>信安之路</p><p>Bypass</p><p>安全小飞侠</p><p>君哥的体历</p><p>浅黑科技</p><h3 id="Android逆向"><a href="#Android逆向" class="headerlink" title="Android逆向"></a>Android逆向</h3><p>编码美丽</p><h3 id="iOS逆向"><a href="#iOS逆向" class="headerlink" title="iOS逆向"></a>iOS逆向</h3><p>iOS安全论坛</p><h3 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h3><p>XCTF联赛</p><h3 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h3><p>物联网IOT安全</p><h3 id="工控安全"><a href="#工控安全" class="headerlink" title="工控安全"></a>工控安全</h3><p>湘雪尘奕</p><h3 id="等级保护"><a href="#等级保护" class="headerlink" title="等级保护"></a>等级保护</h3><p>天億网络安全</p><p>网络安全等级保护测评中心</p><p>天帷等保</p><p>湖南金盾评估中心</p><p>浙江东安检测技术有限公司</p><h3 id="威胁情报"><a href="#威胁情报" class="headerlink" title="威胁情报"></a>威胁情报</h3><p>腾讯安全威胁情报中心</p><p>黑鸟</p><p>ThreatPage全球威胁情报</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;下面是我个人了解一些质量比较好的微信公众号，推荐大家关注，也欢迎补充（请自行去微信搜索公众号名称点击关注）。&lt;/p&gt;
+&lt;h3 id=&quot;综合型&quot;&gt;&lt;a href=&quot;#综合型&quot; class=&quot;headerlink&quot; title=&quot;综合型&quot;&gt;&lt;/a&gt;综合型&lt;/h3&gt;&lt;p&gt;&lt;str
+      
+    
+    </summary>
+    
+    
+      <category term="杂文" scheme="https://laoel.github.io/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="公众号" scheme="https://laoel.github.io/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+      <category term="安全圈" scheme="https://laoel.github.io/tags/%E5%AE%89%E5%85%A8%E5%9C%88/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache安全加固</title>
