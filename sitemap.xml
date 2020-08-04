@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://laoel.github.io/2020/08/04/XSS-Payload/</loc>
+    
+    <lastmod>2020-08-04T12:43:45.081Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://laoel.github.io/2020/04/28/Apache%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA/</loc>
     
     <lastmod>2020-07-02T05:30:56.300Z</lastmod>
