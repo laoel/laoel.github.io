@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laoel.github.io/"/>
-  <updated>2020-08-04T13:08:55.738Z</updated>
+  <updated>2020-08-04T13:51:13.123Z</updated>
   <id>https://laoel.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://laoel.github.io/2020/08/04/XSS-Payload/"/>
     <id>https://laoel.github.io/2020/08/04/XSS-Payload/</id>
     <published>2020-08-04T12:38:42.000Z</published>
-    <updated>2020-08-04T13:08:55.738Z</updated>
+    <updated>2020-08-04T13:51:13.123Z</updated>
     
-    <content type="html"><![CDATA[<p>aaa</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://laoel.github.io/aoe/xss-payload.txt">https://laoel.github.io/aoe/xss-payload.txt</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;aaa&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;https://laoel.github.io/aoe/xss-payload.txt&quot;&gt;https://laoel.github.io/aoe/xss-payload.txt&lt;/a&gt;&lt;/p&gt;
 
       
     
@@ -476,9 +476,9 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
-      <category term="技术文章" scheme="https://laoel.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
-    
       <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
+    
+      <category term="技术文章" scheme="https://laoel.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
@@ -508,9 +508,9 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
-      <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
-    
       <category term="书籍推荐" scheme="https://laoel.github.io/tags/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
     
   </entry>
   
