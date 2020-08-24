@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://laoel.github.io/2020/08/24/iOS%E5%AE%89%E5%85%A8%E4%B9%8BiOS%E9%80%86%E5%90%91%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/</loc>
+    <lastmod>2020-08-24</lastmod>
+  </url>  <url>
     <loc>https://laoel.github.io/2020/08/04/XSS-Payload/</loc>
     <lastmod>2020-08-04</lastmod>
   </url>  <url>
