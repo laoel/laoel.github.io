@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laoel.github.io/"/>
-  <updated>2020-11-08T03:13:26.037Z</updated>
+  <updated>2020-12-04T17:02:42.146Z</updated>
   <id>https://laoel.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>商用密码介绍</title>
+    <link href="https://laoel.github.io/2020/12/05/%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://laoel.github.io/2020/12/05/商用密码介绍/</id>
+    <published>2020-12-04T16:01:49.000Z</published>
+    <updated>2020-12-04T17:02:42.146Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h2><p><strong>定义（引用密码法）</strong></p><p><strong>密码</strong>，是指采用特定变换的方法对信息等进行加密保护、安全认证的技术、产品和服务。</p><p>即密码非指我们平常用的口令，密码是包含三个要素的（明文、密文、密钥）。</p><p><strong>密码分类（三种）</strong></p><p>密码分为核心密码、普通密码和商用密码</p><p>核心密码、普通密码属于<strong>国家秘密</strong>。</p><p>商用密码用于<strong>保护不属于国家秘密的信息</strong>。公民、法人和其他组织可以依法使用商用密码保护网络与信息安全。</p><h2 id="关于密码学的一些书籍"><a href="#关于密码学的一些书籍" class="headerlink" title="关于密码学的一些书籍"></a>关于密码学的一些书籍</h2><br><p><strong>图解密码技术 第3版</strong></p><p><strong><a href="https://item.jd.com/11942019.html" target="_blank" rel="noopener">https://item.jd.com/11942019.html</a></strong></p><p>出版时间：2016-06-01   [日] 结城浩 著，周自恒 译</p><br><p><strong>商用密码应用与安全性评估</strong></p><p><strong><a href="https://item.jd.com/12865754.html" target="_blank" rel="noopener">https://item.jd.com/12865754.html</a></strong></p><p>出版时间：2020-04-01  霍炜 著</p><h2 id="一些单位机构目录"><a href="#一些单位机构目录" class="headerlink" title="一些单位机构目录"></a>一些单位机构目录</h2><blockquote><p><strong><a href="https://www.oscca.gov.cn" target="_blank" rel="noopener">国家密码管理局</a></strong></p><p><strong><a href="https://www.oscca.gov.cn" target="_blank" rel="noopener">https://www.oscca.gov.cn</a></strong></p></blockquote><div class="dropDown dropDown5"><br><h3>各省级密码管理局</h3><!--<ul class="option" style="display: none;">--> <li><a href="http://www.bjgm.gov.cn/" target="_blank">北京市密码管理局</a></li><li><a href="http://www.tjgmj.gov.cn/" target="_blank">天津市密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000039.shtml" target="_blank">河北省密码管理局</a></li><li><a href="http://www.sxgmj.gov.cn/sxmbj/page/index.htm" target="_blank">山西省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000036.shtml" target="_blank">内蒙古自治区密码管理局</a></li><li><a href="http://www.lnsm.gov.cn/" target="_blank">辽宁省密码管理局</a></li><li><a href="http://www.jlpca.gov.cn/" target="_blank">吉林省密码管理局</a></li><li><a href="http://www.hljgmj.gov.cn/" target="_blank">黑龙江省密码管理局</a></li><li><a href="http://mgj.sh.gov.cn/" target="_blank">上海市密码管理局</a></li><li><a href="http://www.jsmm.gov.cn/jsmm/default.aspx" target="_blank">江苏省密码管理局</a></li><li><a href="http://nca.zj.gov.cn/" target="_blank">浙江省密码管理局</a></li><li><a href="http://www.ahcc.gov.cn/index.asp" target="_blank">安徽省密码管理局</a></li><li><a href="http://www.cc.gov.cn/fjsymmw/homeFunction.do" target="_blank">福建省密码管理局</a></li><li><a href="http://www.jxcca.gov.cn/index.html" target="_blank">江西省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000022.shtml" target="_blank">山东省密码管理局</a></li><li><a href="http://www.hngm.gov.cn/gb/wz/index.html" target="_blank">河南省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000020.shtml" target="_blank">湖北省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000019.shtml" target="_blank">湖南省密码管理局</a></li><li><a href="https://gm.gd.gov.cn/" target="_blank">广东省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000017.shtml" target="_blank">广西壮族自治区密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000016.shtml" target="_blank">海南省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000015.shtml" target="_blank">重庆市密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000014.shtml" target="_blank">四川省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000013.shtml" target="_blank">贵州省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000012.shtml" target="_blank">云南省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000011.shtml" target="_blank">西藏自治区密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000010.shtml" target="_blank">陕西省密码管理局</a></li><li><a href="http://www.gsgmjsm.gov.cn/" target="_blank">甘肃省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000008.shtml" target="_blank">青海省密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000006.shtml" target="_blank">宁夏回族自治区密码管理局</a></li><li><a href="http://www.xjgmj.gov.cn/" target="_blank">新疆维吾尔族自治区密码管理局</a></li><li><a href="http://xjbtcca.xjbt.gov.cn/" target="_blank">新疆建设兵团密码管理局</a></li><li><a href="https://www.oscca.gov.cn/sca/jggk/2016-10/24/content_1000003.shtml" target="_blank">深圳市密码管理局</a></li><!--</ul>--> </div> <br><div class="dropDown dropDown6"><h3>密码检测机构</h3><!--<ul class="option" style="display: none;">--><li><a href="http://service.scctc.org.cn/" target="_blank">商用密码认证业务网站</a></li><li><a href="http://www.scctc.org.cn/" target="_blank">商用密码检测中心</a></li><li><a href="http://dxct.org/" target="_blank">鼎铉商用密码测评技术有限公司</a></li><!--</ul>--></div>    <h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><blockquote><p><a href="https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AF%86%E7%A0%81%E6%B3%95/22860972?fromtitle=%E5%AF%86%E7%A0%81%E6%B3%95&fromid=24078179&fr=aladdin" target="_blank" rel="noopener">密码法-百度百科</a></p><p><a href="https://www.cacrnet.org.cn/" target="_blank" rel="noopener">中国密码学会</a></p><p><a href="http://www.gmbz.org.cn/main/index.html" target="_blank" rel="noopener">密码行业标准化技术委员会</a></p><p><a href="https://mp.weixin.qq.com/s/Hi81d6PRUD9fYvNV8tds1Q" target="_blank" rel="noopener">一图读懂国密系列算法</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;概念介绍&quot;&gt;&lt;a href=&quot;#概念介绍&quot; class=&quot;headerlink&quot; title=&quot;概念介绍&quot;&gt;&lt;/a&gt;概念介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;定义（引用密码法）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;密码&lt;/strong&gt;，是指采用特定变换
+      
+    
+    </summary>
+    
+    
+      <category term="密码学" scheme="https://laoel.github.io/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+    
+      <category term="商用密码" scheme="https://laoel.github.io/tags/%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81/"/>
+    
+      <category term="国密" scheme="https://laoel.github.io/tags/%E5%9B%BD%E5%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>一文教你搞定右键菜单的管理</title>
@@ -269,13 +298,13 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
+      <category term="Android漏洞" scheme="https://laoel.github.io/tags/Android%E6%BC%8F%E6%B4%9E/"/>
+    
       <category term="修复建议" scheme="https://laoel.github.io/tags/%E4%BF%AE%E5%A4%8D%E5%BB%BA%E8%AE%AE/"/>
     
       <category term="漏洞库" scheme="https://laoel.github.io/tags/%E6%BC%8F%E6%B4%9E%E5%BA%93/"/>
     
       <category term="测试指南" scheme="https://laoel.github.io/tags/%E6%B5%8B%E8%AF%95%E6%8C%87%E5%8D%97/"/>
-    
-      <category term="Android漏洞" scheme="https://laoel.github.io/tags/Android%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
@@ -303,13 +332,13 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
-      <category term="web漏洞" scheme="https://laoel.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
-    
       <category term="修复建议" scheme="https://laoel.github.io/tags/%E4%BF%AE%E5%A4%8D%E5%BB%BA%E8%AE%AE/"/>
     
       <category term="漏洞库" scheme="https://laoel.github.io/tags/%E6%BC%8F%E6%B4%9E%E5%BA%93/"/>
     
       <category term="测试指南" scheme="https://laoel.github.io/tags/%E6%B5%8B%E8%AF%95%E6%8C%87%E5%8D%97/"/>
+    
+      <category term="web漏洞" scheme="https://laoel.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
@@ -532,9 +561,9 @@
       <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
     
     
-      <category term="web漏洞" scheme="https://laoel.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
-    
       <category term="修复建议" scheme="https://laoel.github.io/tags/%E4%BF%AE%E5%A4%8D%E5%BB%BA%E8%AE%AE/"/>
+    
+      <category term="web漏洞" scheme="https://laoel.github.io/tags/web%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
@@ -564,35 +593,6 @@
       <category term="漏洞" scheme="https://laoel.github.io/tags/%E6%BC%8F%E6%B4%9E/"/>
     
       <category term="漏洞预警" scheme="https://laoel.github.io/tags/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络安全 方面 好文章 摘录</title>
-    <link href="https://laoel.github.io/2019/10/04/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-%E6%96%B9%E9%9D%A2-%E5%A5%BD%E6%96%87%E7%AB%A0-%E6%91%98%E5%BD%95/"/>
-    <id>https://laoel.github.io/2019/10/04/网络安全-方面-好文章-摘录/</id>
-    <published>2019-10-04T14:41:42.000Z</published>
-    <updated>2019-11-07T03:21:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Android 第三方加固方案 对比</p><p><a href="https://www.cnblogs.com/baiqiantao/p/9286449.html" target="_blank" rel="noopener">https://www.cnblogs.com/baiqiantao/p/9286449.html</a></p><p>20180709  白乾涛</p><p>App漏洞扫描哪家强？</p><p><a href="http://blog.sina.com.cn/s/blog_3eecddd20102yf65.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_3eecddd20102yf65.html</a></p><p>20181228  移动互联网李建华</p><p>Android-APP安全系列文章      作者：<strong>Lemon</strong></p><ul><li><a href="https://www.secpulse.com/archives/74861.html" target="_blank" rel="noopener">Android-APP安全测试（一）</a></li><li><a href="https://www.secpulse.com/archives/76102.html" target="_blank" rel="noopener">Android-APP安全测试（二）</a></li><li><a href="https://www.secpulse.com/archives/94026.html" target="_blank" rel="noopener">Android-APP安全测试（三）</a></li><li><a href="https://www.secpulse.com/archives/97228.html" target="_blank" rel="noopener">Android-APP安全（四）之流量分析与内外存储</a></li><li><a href="https://www.secpulse.com/archives/100184.html" target="_blank" rel="noopener">Android-APP 安全（五）之android取证-文件系统与数据结构</a></li><li><a href="https://www.secpulse.com/archives/101931.html" target="_blank" rel="noopener">Android-APP 安全（六）之android取证</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Android 第三方加固方案 对比&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/baiqiantao/p/9286449.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.
-      
-    
-    </summary>
-    
-    
-      <category term="长期更新" scheme="https://laoel.github.io/categories/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
-    
-    
-      <category term="摘录" scheme="https://laoel.github.io/tags/%E6%91%98%E5%BD%95/"/>
-    
-      <category term="技术文章" scheme="https://laoel.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
