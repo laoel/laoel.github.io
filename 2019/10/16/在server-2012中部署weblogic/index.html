@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="à ō é's blog"><meta name="keywords" content="aoe,blog,网络安全,移动安全,app,Android,iOS,à ō é,等级保护,等保测评"><link rel="stylesheet" type="text/css" href="//fonts.loli.net/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.4"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.4"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><title>在server 2012中部署weblogic | à ō é</title></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">在server 2012中部署weblogic</h1><a id="logo" href="/.">à ō é</a><p class="description">不 怨 天  不 尤 人  上 学 而 下 达</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">在server 2012中部署weblogic</h1><div class="post-meta"><a href="/2019/10/16/在server-2012中部署weblogic/#comments" class="comment-count"></a><p><span class="date">Oct 16, 2019</span><span><a href="/categories/安装配置/" class="category">安装配置</a></span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><h4 id="Weblogic介绍"><a href="#Weblogic介绍" class="headerlink" title="Weblogic介绍"></a>Weblogic介绍</h4><p>Oracle WebLogic Server 是全球第一款云原生，适用于多层分布式企业应用开发和部署的企业级 Java 平台应用服务器，能够集中管理各种应用服务，如 Web 服务器功能、业务组件，以及企业后端系统访问，等等。</p>
+<p>Oracle WebLogic Server 提供以下云就绪特性：</p>
+<ul>
+<li>独特的多租户功能，有力促进大规模整合</li>
+<li>轻型微容器架构，加强应用隔离并实现私有云与公有云之间的完全可移植性</li>
+<li>多数据中心高可用性架构，有效防范应用中断</li>
+<li>全面支持 Java EE 8 和 Java SE 12，帮助开发人员锐意创新，充分发挥 DevOps 的效力。</li>
+<li>基于 Oracle WebLogic Server 的 Oracle Java 云服务，无论在本地还是云端都能访问同一平台</li>
+</ul>
+<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><h5 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h5><ul>
+<li>jdk安装包</li>
+</ul>
+<p><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570613400869.png" alt="1570613400869"></p>
+<ul>
+<li>weblogic安装包</li>
+</ul>
+<p><a href="https://www.oracle.com/middleware/technologies/fusionmiddleware-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/middleware/technologies/fusionmiddleware-downloads.html</a></p>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570613475278.png" alt="1570613475278">  </p>
+<h5 id="jdk-环境变量配置"><a href="#jdk-环境变量配置" class="headerlink" title="jdk 环境变量配置"></a>jdk 环境变量配置</h5><p>右击我的电脑 $\Longrightarrow$属性 $\Longrightarrow$ 高级系统设置$\Longrightarrow$ 环境变量</p>
+<p>在系统变量中</p>
+<ol>
+<li>新建名为 <code>classpath</code> 的变量名，变量值为</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>新建名为 <code>JAVA_HOME</code> 的变量名，变量值为 <strong>jdk的安装路径</strong>，下面是我电脑中的jdk安装路径。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Java\jdk1.8.0_191</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>在系统变量 <code>path</code> 中最末尾加上</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>然后保存，重新打开终端，分别输入 <code>java -version</code> 和 <code>javac -version</code> ，若均显示出对应的版本信息，则说明环境变量配置成功，如下所示。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 6.3.9600]</span><br><span class="line">(c) 2013 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator&gt;java -version</span><br><span class="line">java version <span class="string">"1.8.0_191"</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.191-b12, mixed mode)</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator&gt;javac -version</span><br><span class="line">javac 1.8.0_191</span><br><span class="line"></span><br><span class="line">C:\Users\Administrator&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h4><ol>
+<li>启动安装程序</li>
+</ol>
+<p>在weblogic官网下载的是一个zip压缩文件，解压后为一个jar包。</p>
+<p>打开终端，进入安装包的存放路径，输入以下命令启动安装程序：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar fmw_12.2.1.3.0_wls.jar</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570611958394.png" alt="1570611958394"></p>
+<ol start="2">
+<li>选择安装路径</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570612154754.png" alt="1570612154754"></p>
+<ol start="3">
+<li>选择安装类型（软件功能点）</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570612251416.png" alt="1570612251416"></p>
+<ol start="4">
+<li>之后进入 先决条件检查，然后是安装概要，没有问题后，我们点击<strong>安装</strong>。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570612381003.png" alt="1570612381003"></p>
+<ol start="5">
+<li>可以看它的安装进度，等待它安装完成即可。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570612708779.png" alt="1570612708779"></p>
+<h4 id="部署weblogic"><a href="#部署weblogic" class="headerlink" title="部署weblogic"></a>部署weblogic</h4><ol>
+<li>在<code>开始</code>中找到<code>Configuration Wizard</code>即配置向导，开始创建域。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570671016770.png" alt="1570671016770"></p>
+<ol start="2">
+<li>下图所示，默认选中第一个<code>Basic Weblogic Server ......</code>，即创建基本的域即可。其它几种domain类型是针对特定应用的，如sip、webservice。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570671822065.png" alt="1570671822065"></p>
+<ol start="3">
+<li>设置管理员账号即管理domain（修改配置、启动、停止等维护操作）的操作账号。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570671942191.png" alt="1570671942191"></p>
+<ol start="4">
+<li>选择域模式和JDK。</li>
+</ol>
+<p>weblogic提供两种启动模式（开发模式、生产模式）。</p>
+<ul>
+<li>开发模式，启动domain是不需要输入管理账号、密码的，并且轮训部署的应用程序，如果有文件更新，会自动更新（传说中的热部署）。</li>
+<li>生产模式，启动domain必须输入管理账号、密码。为了提高性能，不会对应用程序进行轮训，而且建议使用原先bea自带的jrockit jdk作为运行的jdk（不过自从被oracle收购之后，安装目录下未提供jrockit jdk了（需要自行下载）。</li>
+</ul>
+<p>这里选择默认的<code>开发模式</code>，选择JDK之后，点击下一步。</p>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570672340108.png" alt="1570672340108"></p>
+<ol start="5">
+<li>高级配置（可选配置），一般涉及到集群才需要选择，这里直接下一步。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570672593028.png" alt="1570672593028"></p>
+<ol start="6">
+<li>配置概要，点击<code>创建</code>按钮，进行domain的创建。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570672688079.png" alt="1570672688079"></p>
+<ol start="7">
+<li>配置进度。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570672812104.png" alt="1570672812104"></p>
+<ol start="8">
+<li>配置完毕后如下图，可以选中点击<code>启动管理服务器</code>立即启动服务器。或者点击<code>完成</code>退出安装向导界面（后面如果启动服务器，到域目录下双击<code>startWebLogic.cmd</code>即可。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570672832266.png" alt="1570672832266"></p>
+<ol start="9">
+<li><strong>启动服务器</strong></li>
+</ol>
+<p>到域目录下双击<code>startWebLogic.cmd</code>即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\startWebLogic.cmd</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570672986835.png" alt="1570672986835"></p>
+<p>等待一会，看到有IP+端口(7001)后说明服务器启动完毕，或者说命令窗口不动后。</p>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570673605710.png" alt="1570673605710"></p>
+<ol start="10">
+<li>登录控制台，输入之前配置的管理账号、口令。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570673749782.png" alt="1570673749782"></p>
+<ol start="11">
+<li>如下，就是WebLogic Server管理控制台，可以部署war包等操作。</li>
+</ol>
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570674195820.png" alt="1570674195820"></p>
+<ol start="12">
+<li>部署war包，这里就不介绍了，可参考下面这篇文章。与其他中间件部署war步骤大体相同。</li>
+</ol>
+<p><a href="https://www.cnblogs.com/DFX339/p/8515200.html" target="_blank" rel="noopener">weblogic部署web项目（war包）- 阿叮339</a></p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a><strong>注意：</strong></h4><p>如果需要关闭weblogic，只需关闭weblogic窗口(即启动weblogic服务器时打开的命令窗口)就可以了。</p>
+<p>weblogic的管理账号和密码会存储在本地的<code>boot.properties</code>文件中，可解密出明文，并不安全。</p>
+<h4 id="安装过程可能遇到的有一些报错"><a href="#安装过程可能遇到的有一些报错" class="headerlink" title="安装过程可能遇到的有一些报错"></a>安装过程可能遇到的有一些报错</h4><h5 id="a-不是有效的JDK-java-主目录"><a href="#a-不是有效的JDK-java-主目录" class="headerlink" title="a. 不是有效的JDK java 主目录"></a>a. 不是有效的JDK java 主目录</h5><p>出现错误提示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">java -jar fmw_12.2.1.3.0_wls.jar</span><br><span class="line">启动程序日志文件为C:\Users\Administrator\AppData\Local\Temp\OraInsta</span><br><span class="line">ll2019-10-09_10-29-34AM\launcher2019-10-09_10-29-34AM.log。</span><br><span class="line">正在提取安装程序... . . . . . . . . . . . . . . . . . . . . . . . .</span><br><span class="line">. . . . . . . . 完成</span><br><span class="line">此安装程序必须使用 Java 开发工具包 (JDK) 执行,</span><br><span class="line">但 C:\Program Files\Java\jre1.8.0_191 不是有效的 JDK Java 主目录。</span><br><span class="line">日志位于此处: C:\Users\Administrator\AppData\Local\Temp\OraInstall20</span><br><span class="line">19-10-09_10-29-34AM\launcher2019-10-09_10-29-34AM.log。</span><br><span class="line"></span><br><span class="line">按 Enter 退出</span><br></pre></td></tr></table></figure>
+
+<p>说明没有指定jdk中的<code>java.exe</code>程序，另外要以管理员身份运行cmd。</p>
+<ul>
+<li>方法1：把安装包（jar包）移动到<code>java.exe</code>程序的同级目录中，然后运行<code>java -jar fmw_12.2.1.3.0_wls.jar</code></li>
+<li>方法2：直接指定jdk中的<code>java.exe</code>程序来运行jar包。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\fmw&gt;<span class="string">"C:\Program Files\Java\jdk1.8.0_191\bin\java"</span> -jar fmw_12.2.1.3.0_wls.jar</span><br></pre></td></tr></table></figure>
+
+<p>也可参考这篇文章<a href="https://blog.csdn.net/heremy/article/details/100099350" target="_blank" rel="noopener">cmd安装weblogic12c提示jre不是有效的JDK java主目录`问题解决过程 - heremy</a></p>
+<h5 id="b-找不到Configuration-Wizard配置向导"><a href="#b-找不到Configuration-Wizard配置向导" class="headerlink" title="b. 找不到Configuration Wizard配置向导"></a>b. 找不到<code>Configuration Wizard</code>配置向导</h5><p>如果在开始程序中找不到<code>Configuration Wizard</code>配置向导，可以在weblogic的安装路径中找到<code>config.cmd</code>，运行它。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Oracle\Middleware\Oracle_Home\oracle_common\common\bin\config.cmd</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pyus9t3n6.bkt.clouddn.com/%E5%9C%A8server%202012%E4%B8%AD%E9%83%A8%E7%BD%B2weblogic/1570671219472.png" alt="1570671219472"></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.51cto.com/meiling/1829566" target="_blank" rel="noopener">WebLogic(12C)——windows下安装教程 - M_ling</a></p>
+<p><a href="https://blog.csdn.net/qq_36868342/article/details/79967606" target="_blank" rel="noopener">超详细 Windows下安装以及部署Weblogic - 叁念</a></p>
+<p><a href="https://blog.51cto.com/sf1314/2056587" target="_blank" rel="noopener">WebLogic常见问题 - Mr_sheng</a></p>
+<p><a href="https://www.cnblogs.com/DFX339/p/8515200.html" target="_blank" rel="noopener">weblogic部署web项目（war包）- 阿叮339</a></p>
+</div><div class="post-copyright"><blockquote><p>原文作者: à ō é</p><p>原文链接: <a href="https://laoel.github.io/2019/10/16/在server-2012中部署weblogic/">https://laoel.github.io/2019/10/16/在server-2012中部署weblogic/</a></p><p>版权声明: 转载请注明出处(必须保留原文作者署名原文链接)</p></blockquote></div><div class="tags"><a href="/tags/安装/">安装</a><a href="/tags/weblogic/">weblogic</a></div><div class="post-share"><div class="social-share"><span>分享到:</span></div></div><div class="post-nav"><a href="/2019/11/20/一些配置小记/" class="pre">一些配置小记</a><a href="/2019/10/09/在ubuntu18-04上安装和配置Apache2/" class="next">在ubuntu18.04上安装和配置Apache2</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Weblogic介绍"><span class="toc-text">Weblogic介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#下载安装包"><span class="toc-text">下载安装包</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#jdk-环境变量配置"><span class="toc-text">jdk 环境变量配置</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开始安装"><span class="toc-text">开始安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#部署weblogic"><span class="toc-text">部署weblogic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意："><span class="toc-text">注意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装过程可能遇到的有一些报错"><span class="toc-text">安装过程可能遇到的有一些报错</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#a-不是有效的JDK-java-主目录"><span class="toc-text">a. 不是有效的JDK java 主目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#b-找不到Configuration-Wizard配置向导"><span class="toc-text">b. 找不到Configuration Wizard配置向导</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/06/18/关于adb的一些常用命令/">关于adb的一些常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/05/商用密码介绍/">商用密码介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/08/一文教你搞定右键菜单的管理/">一文教你搞定右键菜单的管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/29/Windows安全加固/">Windows安全加固</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/12/MySQL安全加固/">MySQL安全加固</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/24/iOS安全之iOS逆向环境准备/">iOS安全之iOS逆向环境准备</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/04/XSS-Payload/">XSS-Payload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/01/安全圈里的公众号推荐/">安全圈里的公众号推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/04/28/Apache安全加固/">Apache安全加固</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/16/等保2-0-安全通信网络/">等保2.0-安全通信网络</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android逆向/">Android逆向</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Payload/">Payload</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS安全/">iOS安全</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/">兴趣爱好</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全加固/">安全加固</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/安装配置/">安装配置</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/密码学/">密码学</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂文/">杂文</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/漏洞复现/">漏洞复现</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/等保测评/">等保测评</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/长期更新/">长期更新</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试/">面试</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/apache/" style="font-size: 15px;">apache</a> <a href="/tags/加固/" style="font-size: 15px;">加固</a> <a href="/tags/中间件/" style="font-size: 15px;">中间件</a> <a href="/tags/CFOP公式/" style="font-size: 15px;">CFOP公式</a> <a href="/tags/魔方/" style="font-size: 15px;">魔方</a> <a href="/tags/Android漏洞/" style="font-size: 15px;">Android漏洞</a> <a href="/tags/修复建议/" style="font-size: 15px;">修复建议</a> <a href="/tags/漏洞库/" style="font-size: 15px;">漏洞库</a> <a href="/tags/测试指南/" style="font-size: 15px;">测试指南</a> <a href="/tags/windows/" style="font-size: 15px;">windows</a> <a href="/tags/安全加固/" style="font-size: 15px;">安全加固</a> <a href="/tags/CVE/" style="font-size: 15px;">CVE</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/Payload/" style="font-size: 15px;">Payload</a> <a href="/tags/XSS/" style="font-size: 15px;">XSS</a> <a href="/tags/web漏洞/" style="font-size: 15px;">web漏洞</a> <a href="/tags/iOS逆向/" style="font-size: 15px;">iOS逆向</a> <a href="/tags/移动安全/" style="font-size: 15px;">移动安全</a> <a href="/tags/md/" style="font-size: 15px;">md</a> <a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/语法介绍/" style="font-size: 15px;">语法介绍</a> <a href="/tags/小技巧/" style="font-size: 15px;">小技巧</a> <a href="/tags/adb/" style="font-size: 15px;">adb</a> <a href="/tags/常用命令/" style="font-size: 15px;">常用命令</a> <a href="/tags/右键菜单/" style="font-size: 15px;">右键菜单</a> <a href="/tags/环境搭建/" style="font-size: 15px;">环境搭建</a> <a href="/tags/LNMP/" style="font-size: 15px;">LNMP</a> <a href="/tags/商用密码/" style="font-size: 15px;">商用密码</a> <a href="/tags/国密/" style="font-size: 15px;">国密</a> <a href="/tags/杂文/" style="font-size: 15px;">杂文</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/公众号/" style="font-size: 15px;">公众号</a> <a href="/tags/安全圈/" style="font-size: 15px;">安全圈</a> <a href="/tags/安装/" style="font-size: 15px;">安装</a> <a href="/tags/weblogic/" style="font-size: 15px;">weblogic</a> <a href="/tags/面试经验/" style="font-size: 15px;">面试经验</a> <a href="/tags/渗透测试/" style="font-size: 15px;">渗透测试</a> <a href="/tags/Apache/" style="font-size: 15px;">Apache</a> <a href="/tags/配置/" style="font-size: 15px;">配置</a> <a href="/tags/等保/" style="font-size: 15px;">等保</a> <a href="/tags/漏洞/" style="font-size: 15px;">漏洞</a> <a href="/tags/漏洞预警/" style="font-size: 15px;">漏洞预警</a> <a href="/tags/书籍推荐/" style="font-size: 15px;">书籍推荐</a> <a href="/tags/摘录/" style="font-size: 15px;">摘录</a> <a href="/tags/技术文章/" style="font-size: 15px;">技术文章</a> <a href="/tags/网络安全/" style="font-size: 15px;">网络安全</a> <a href="/tags/信息安全/" style="font-size: 15px;">信息安全</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="http://iosre.com" title="iOSRE | 逆" target="_blank">iOSRE | 逆</a><ul></ul><a href="https://www.bugbank.cn" title="漏洞银行" target="_blank">漏洞银行</a><ul></ul><a href="http://www.wjdiankong.cn" title="尼古拉斯.赵四" target="_blank">尼古拉斯.赵四</a><ul></ul><a href="https://www.exploit-db.com" title="Exploit Database" target="_blank">Exploit Database</a><ul></ul><a href="http://a--o--e.lofter.com" title="以前的博客" target="_blank">以前的博客</a><ul></ul><a href="https://bbs.ichunqiu.com/home.php?mod=space&amp;uid=272066&amp;do=thread&amp;view=me&amp;from=space" title="在i春秋社区发布的一些帖子" target="_blank">在i春秋社区发布的一些帖子</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">网站地图</a> |  <a href="/atom.xml">订阅本站</a> |  <a href="/about/">联系博主</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次，本站总访客数:<i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人</p><p><span> Copyright &copy;<a href="/." rel="nofollow">à ō é.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a5e9eb180965a7958e3fe088b78b163c";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/search.json.js?v=2.0.4"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});</script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML" async></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.4" async></script><link rel="stylesheet" type="text/css" href="/share/css/share.css"><script type="text/javascript" src="/share/js/social-share.js" charset="utf-8"></script><script type="text/javascript" src="/share/js/qrcode.js" charset="utf-8"></script></body></html>
